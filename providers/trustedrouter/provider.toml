@@ -1,3 +1,8 @@
+# Cache (chat): chat has no router setting; `prompt_cache_retention` returns 501; Anthropic messages route keeps native `cache_control` breakpoints.
+# Use body: none.
+# Use headers: none.
+# Use prefix: keep prefix stable; pin provider-only for locality; read `cached_tokens`.
+# Docs: https://trustedrouter.com/docs/prompt-caching
 name = "TrustedRouter"
 env = ["TRUSTEDROUTER_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

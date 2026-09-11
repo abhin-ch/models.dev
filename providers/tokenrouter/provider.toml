@@ -1,3 +1,8 @@
+# Cache (chat): no chat cache params documented; smart caching is gateway-side.
+# Use body: none.
+# Use headers: none.
+# Use prefix: reuse stable prefixes; per-model cache pricing applies on a hit.
+# Docs: https://www.tokenrouter.com/docs/tokenrouter-feature-guide/
 name = "TokenRouter"
 env = ["TOKENROUTER_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

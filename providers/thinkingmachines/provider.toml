@@ -1,3 +1,8 @@
+# Cache (chat): Anthropic route ignores `cache_control`; cache usage fields always null.
+# Use body: none — no chat cache field documented.
+# Use headers: none.
+# Use prefix: keep prefix stable for native sampler reuse.
+# Docs: https://tinker-docs.thinkingmachines.ai/tinker/compatible-apis/anthropic/
 # Tinker's Anthropic-compatible API serves base models such as
 # `thinkingmachines/Inkling`; the OpenAI-compatible API documents
 # `tinker://.../sampler_weights/...` checkpoint paths instead.

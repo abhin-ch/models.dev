@@ -1,3 +1,8 @@
+# Cache (chat): closed chat schema lists no cache fields; invalid params return 400.
+# Use body: none — chat defines no cache key field.
+# Use headers: none.
+# Use prefix: repeat stable prefixes on warm replicas; confirm via `prompt_tokens_details.cached_tokens`.
+# Docs: https://docs.tensorx.ai/api-reference/prompt-caching
 name = "TensorX"
 env = ["TENSORX_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

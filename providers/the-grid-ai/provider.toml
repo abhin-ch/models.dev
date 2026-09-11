@@ -1,3 +1,8 @@
+# Cache (chat): consumption API documents no chat cache controls.
+# Use body: none.
+# Use headers: none.
+# Use prefix: keep shared prefix stable for router-side reuse.
+# Docs: https://thegrid.ai/docs/api-reference/consumption-api
 name = "The Grid AI"
 env = ["THEGRID_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,8 @@
+# Cache (chat): no cache key field documented; cache layer reuses repeated prefixes automatically.
+# Use body: none.
+# Use headers: none.
+# Use prefix: repeat stable prompt prefixes for KV reuse.
+# Docs: https://www.tokengo.com/
 # TokenGo is an OpenAI-compatible multi-model gateway (POST /v1/chat/completions).
 # Sources (accessed 2026-08-27), and what each supports:
 # - https://www.tokengo.com/docs/documentation/getting-started/introduction
