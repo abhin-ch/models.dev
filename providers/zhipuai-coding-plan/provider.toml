@@ -1,3 +1,8 @@
+# Prompt cache: implicit automatic context cache on the coding chat endpoint at a discount.
+# Body: no cache fields and no `prompt_cache_key` field; POST /api/coding/paas/v4/chat/completions with model/messages only.
+# Headers: none documented for cache control.
+# Prefix reuse: identical system prompt first with chat history appended; hits visible via Cached Input deduction and `usage.prompt_tokens_details.cached_tokens`.
+# Docs: https://docs.bigmodel.cn/cn/coding-plan/overview
 # OpenAI Chat endpoint: POST https://open.bigmodel.cn/api/coding/paas/v4/chat/completions.
 # GLM-5.2 maps low|medium|high to high and xhigh|max|ultracode to max.
 # https://docs.bigmodel.cn/cn/coding-plan/latest-model (accessed 2026-06-25)

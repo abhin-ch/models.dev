@@ -1,3 +1,8 @@
+# Prompt cache: implicit automatic context cache; repeated prefixes reuse prior compute at a discount.
+# Body: no cache fields and no `prompt_cache_key` field; model/messages shape only.
+# Headers: none documented for cache control.
+# Prefix reuse: identical system prompt first with chat history appended; hits visible in `usage.prompt_tokens_details.cached_tokens`.
+# Docs: https://docs.bigmodel.cn/cn/guide/capabilities/cache
 # Chat reasoning: POST https://open.bigmodel.cn/api/paas/v4/chat/completions with
 # `thinking.type = "enabled" | "disabled"` (default: enabled).
 # https://docs.bigmodel.cn/cn/guide/capabilities/thinking (accessed 2026-06-25)

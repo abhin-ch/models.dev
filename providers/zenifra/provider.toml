@@ -1,3 +1,8 @@
+# Prompt cache: no documented provider cache; OpenAI-compatible chat lists no cache params or cached-token usage fields.
+# Body: no cache fields and no `prompt_cache_key` field; chat schema covers model/messages only.
+# Headers: none documented for cache routing.
+# Prefix reuse: identical leading messages raise upstream reuse odds; static content first, variable content last.
+# Docs: https://docs.zenifra.com/en/docs/ai
 name = "Zenifra"
 env = ["ZENIFRA_AI_KEY"]
 npm = "@ai-sdk/openai-compatible"

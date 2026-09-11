@@ -1,3 +1,8 @@
+# Prompt cache: explicit body `cache_control` markers plus implicit automatic prefix cache.
+# Body: `cache_control` with `type: ephemeral` on stable blocks; tools → system → messages order, max 4 markers.
+# Headers: none documented for cache routing.
+# Prefix reuse: static content first, variable content last; minima 1024 Claude Sonnet/Opus, 2048 Haiku 3.5, 256 Qwen; 5m TTL.
+# Docs: https://docs.zenmux.ai/guide/advanced/prompt-cache.html
 # OpenAI POST /api/v1/chat/completions: `reasoning_effort`, or `reasoning`
 # with `effort`, `max_tokens`, and `enabled`.
 # Anthropic POST /api/anthropic/v1/messages: `thinking.type` enabled|disabled;
