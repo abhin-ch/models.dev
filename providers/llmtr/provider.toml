@@ -1,3 +1,8 @@
+# Cache (chat): gateway passthrough — caching is per-route upstream only with a closed body param list.
+# Cache headers: none — Use no cache headers.
+# Cache body: none — Use no body key field; no key field is listed (usage billing is separate from key control).
+# Cache policy: supporting routes cache stable prefixes and report hits at usage.prompt_tokens_details.cached_tokens billed at cache-read; stable content first, volatile last.
+# Docs: https://llmtr.com/docs/gateway/chat-completions/
 # POST /v1/responses uses $.reasoning.effort = minimal|low|medium|high|xhigh;
 # model suffixes :min|:low|:medium|:med|:high|:max|:xhigh are aliases, body
 # wins, and unsupported levels return 400 unsupported_capability. Codex models

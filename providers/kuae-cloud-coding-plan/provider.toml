@@ -1,3 +1,8 @@
+# Cache (chat): plan passthrough — subscription-plan OpenAI-compatible endpoint with no documented cache behavior.
+# Cache headers: none — Use no cache headers.
+# Cache body: none — Use no body key field; coding-plan docs publish no request params.
+# Cache policy: passthrough with no documented controls; keep prefixes stable but expect no discount.
+# Docs: https://docs.mthreads.com/kuaecloud/kuaecloud-doc-online/coding_plan/
 # Raw HTTP uses POST /v1/chat/completions; the Coding Plan guide does not
 # publish effort values or a reasoning-token budget in its request surface.
 # https://docs.mthreads.com/kuaecloud/kuaecloud-doc-online/coding_plan/ (accessed 2026-06-25)

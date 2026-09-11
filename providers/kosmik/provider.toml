@@ -1,3 +1,8 @@
+# Cache (chat): automatic prefix cache — OpenAI-compatible relay that keeps requests unchanged.
+# Cache headers: none — Use no cache headers.
+# Cache body: none — Use no body key field; docs publish cached-input billing but no key param (billing is not a key).
+# Cache policy: reuse stable prefixes verbatim; stable content first, volatile last.
+# Docs: https://api.koscompute.com/docs/
 name = "Kosmik Compute"
 env = ["KOSMIK_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

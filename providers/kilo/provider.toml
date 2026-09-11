@@ -1,3 +1,8 @@
+# Cache (chat): passthrough gateway — OpenAI-compatible relay with no gateway cache controls; any prefix reuse is provider-side only.
+# Cache headers: none — Use no cache headers; no HIT/bypass header is documented.
+# Cache body: none — Use no body key field; chat schema has no key or cache_control field.
+# Cache policy: keep a stable prefix verbatim; cached-token usage is not reported, so no discount to target.
+# Docs: https://kilo.ai/docs/gateway/api-reference
 name = "Kilo Gateway"
 env = ["KILO_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

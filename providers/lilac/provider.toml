@@ -1,3 +1,8 @@
+# Cache (chat): automatic prefix cache — server-side only on shared warm vLLM endpoints.
+# Cache headers: none — Use no cache headers.
+# Cache body: none — Use no body key field; request params list no key (billing rate is separate from key control).
+# Cache policy: stable content first, volatile last; repeated prefixes bill at the cache-read rate.
+# Docs: https://docs.getlilac.com/inference/pricing
 # POST /v1/chat/completions carries model-template controls under
 # $.chat_template_kwargs; keys and values are model-specific, not universal.
 # https://docs.getlilac.com/inference/chat-completions (accessed 2026-06-25)

@@ -1,3 +1,8 @@
+# Cache (chat): implicit context cache — server-side only per model ID with no documented cache params.
+# Cache headers: none — Use no cache headers; no control header is documented.
+# Cache body: none — Use no body key field; no key param is documented.
+# Cache policy: stay on one model ID with a stable prefix; start a new session on model switch, which invalidates the cache.
+# Docs: https://www.kimi.com/code/docs/en/kimi-code/models.html
 # NOTE: api.kimi.com/coding serves BOTH Anthropic (/v1/messages) and
 # OpenAI-compatible (/v1/chat/completions) protocols (verified 2026-07).
 # Registered as @ai-sdk/anthropic: the Messages surface is the officially
