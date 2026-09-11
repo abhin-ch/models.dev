@@ -1,3 +1,8 @@
+# Cache key (chat): none — body lists only model/messages/max_tokens/temperature/stream; models endpoint exposes no cache-tier pricing; prompt_cache_key is consumed at the gateway and removed before upstream.
+# Cache headers: none
+# Cache policy: router with automatic failover; caching (if any) follows the selected upstream.
+# Cache reuse: retain full history with a stable prefix.
+# Docs: https://app.routing.run/docs/api/chat-completions
 name = "routing.run"
 env = ["ROUTING_RUN_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

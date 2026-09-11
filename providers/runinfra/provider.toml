@@ -1,3 +1,8 @@
+# Cache key (chat): use body field prompt_cache_key for routing (consumed at the gateway and removed before the model) and body field runinfra.sessionId; session identity takes precedence.
+# Cache headers: x-session-id pins placement for the idle TTL; x-parent-session-id for fan-out; x-runinfra-session also honored.
+# Cache policy: automatic prefix cache at ~1/10 input rate; prompt_cache_key routes without pinning; read usage.prompt_tokens_details.cached_tokens; GLM 5.3 Flash named sessions keep across idle gaps.
+# Cache reuse: retain full history; keep a stable append-only prefix; prefer x-session-id for multi-turn sessions.
+# Docs: https://runinfra.ai/docs/cookbook/prompt-caching.md
 # Docs: https://runinfra.ai/docs
 # Per-model pages: https://runinfra.ai/inference-api/<slug>
 # API: OpenAI-compatible chat completions at https://api.runinfra.ai/v1 (/chat/completions, /models)

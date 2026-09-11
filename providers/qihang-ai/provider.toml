@@ -1,3 +1,8 @@
+# Cache key (chat): none — OpenAPI schema lists only model/messages/style/stream; no cache control documented; prompt_cache_key is consumed at the gateway and removed before upstream.
+# Cache headers: none
+# Cache policy: relay; caching (if any) follows the serving upstream.
+# Cache reuse: retain full history with a stable prefix.
+# Docs: https://www.qhaigc.net/docs/api-reference/chat/openai-style.md
 name = "QiHang"
 npm = "@ai-sdk/openai-compatible"
 api = "https://api.qhaigc.net/v1"

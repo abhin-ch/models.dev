@@ -1,3 +1,8 @@
+# Cache key (chat): none — llms-full.txt documents only unified reasoning + schema via extra_body; no chat cache key; prompt_cache_key is consumed at the gateway and removed before upstream.
+# Cache headers: none
+# Cache policy: gateway translates unified params to per-upstream native shapes; caching follows the serving upstream.
+# Cache reuse: retain full history with a stable append-only prefix.
+# Docs: https://agent.pioneer.ai/llms-full.txt
 name = "Pioneer"
 env = ["PIONEER_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

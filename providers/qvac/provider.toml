@@ -1,3 +1,8 @@
+# Cache key (chat): none — OpenAI-compatible chat documents no cache params; prompt_cache_key is consumed at the gateway and removed before the engine; KV hits surface only via usage.prompt_tokens_details.cached_tokens.
+# Cache headers: none
+# Cache policy: local on-device runtime; engine-local KV reuse across turns with a stable prefix; no billing.
+# Cache reuse: retain full history with a stable prefix.
+# Docs: https://docs.qvac.tether.io/cli/http-server/
 name = "QVAC"
 env = ["QVAC_API_KEY"]
 npm = "@qvac/ai-sdk-provider"

@@ -1,3 +1,8 @@
+# Cache key (chat): use body object requesty.auto_cache boolean plus pass-through cache_control breakpoints; no router-side cache store; prompt_cache_key is consumed at the gateway and removed before upstream.
+# Cache headers: none — cache control is the request body object, not a header.
+# Cache policy: router adds breakpoints for explicit-breakpoint providers and forwards; provider caches server-side; true attempts caching, false skips costly writes; defaults vary by origin.
+# Cache reuse: retain full history in each request with a stable prefix.
+# Docs: https://docs.requesty.ai/features/auto-caching
 name = "Requesty"
 env = ["REQUESTY_API_KEY"]
 npm = "@ai-sdk/openai-compatible"
