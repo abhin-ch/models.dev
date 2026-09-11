@@ -1,3 +1,8 @@
+# Cache support: automatic implicit cache with Cached Token billing; no client key on chat.
+# Use body: omit `prompt_cache_key`; schema lists model / messages / tools / reasoning_effort only.
+# Use headers: none.
+# To get a hit: keep shared prefix stable for implicit reuse.
+# Docs: https://docs.vivgrid.com/models
 name = "Vivgrid"
 env = ["VIVGRID_API_KEY"]
 api = "https://api.vivgrid.com/v1"

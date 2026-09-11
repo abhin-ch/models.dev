@@ -1,3 +1,8 @@
+# Cache support: none on chat; usage reports prompt / completion / total with no cached accounting.
+# Use body: omit `prompt_cache_key`; chat table lists model / messages / max_tokens / stream / temperature only.
+# Use headers: none.
+# To get a hit: keep shared prefix stable for any upstream implicit reuse.
+# Docs: https://vancine.com/docs
 name = "Vancine"
 npm = "@ai-sdk/openai-compatible"
 env = ["VANCINE_API_KEY"]

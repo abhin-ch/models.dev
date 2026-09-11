@@ -1,3 +1,8 @@
+# Cache support: none on chat; Model API and v2 chats API define no cache controls.
+# Use body: omit `prompt_cache_key`; chat accepts message / system / modelConfiguration only.
+# Use headers: none.
+# To get a hit: no client control; generation lives on the native v2 chats API with stable inputs.
+# Docs: https://v0.dev/docs/api/v2
 name = "v0"
 env = ["V0_API_KEY"]
 npm = "@ai-sdk/vercel"

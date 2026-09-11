@@ -1,3 +1,8 @@
+# Cache support: none on chat; the provider returns 400 on unknown field "prompt_cache_key".
+# Use body: omit `prompt_cache_key` on chat; `context_id` belongs to the separate Context API only.
+# Use headers: none.
+# To get a hit: call ContextCreate once, then reuse `context_id` on ContextChatCompletions; or use Responses caching with previous_response_id.
+# Docs: https://api.volcengine.com/api-docs/?serviceCode=ark&version=2024-01-01
 name = "Volcengine Ark Coding Plan"
 env = ["ARK_CODING_PLAN_API_KEY"]
 npm = "@ai-sdk/openai-compatible"
