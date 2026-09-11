@@ -1,3 +1,8 @@
+# Cache key (chat): Use headers/body none — chat completions schema documents no prompt_cache_key, cache_control, or cache headers; usage has no cached-token fields.
+# Cache headers: none
+# Cache body: none
+# Cache policy: auto — no native cache control documented; keep stable prefix first.
+# Docs: https://docs.sarvam.ai/api-reference-docs/chat/chat-completions
 name = "Sarvam AI"
 env = ["SARVAM_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,8 @@
+# Cache key (chat): Use headers/body none — `prompt_cache_key` absent from supported chat params; discounted cached-input billing is a billing fact only.
+# Cache headers: none
+# Cache body: none
+# Cache policy: auto — Serverless persists prefix cache automatically via heuristics (50–90% hit for recurring prefixes, discounted cached-input billing, monitor in Cockpit); Dedicated includes its input cache; keep stable prefix first.
+# Docs: https://www.scaleway.com/en/docs/generative-apis/faq/
 name = "Scaleway"
 npm = "@ai-sdk/openai-compatible"
 api = "https://api.scaleway.ai/v1"

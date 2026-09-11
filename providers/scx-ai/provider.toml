@@ -1,3 +1,8 @@
+# Cache key (chat): Use headers/body none — OpenAI-compatibility guide documents no cache params; unsupported fields are ignored.
+# Cache headers: none
+# Cache body: none
+# Cache policy: auto — no native cache control documented; keep stable prefix first.
+# Docs: https://platform.scx.ai/docs/guides/openai-compatibility
 name = "SCX.ai"
 env = ["SCX_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

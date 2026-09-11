@@ -1,3 +1,8 @@
+# Cache key (chat): Use body `cache_control` — orchestration API (custom AI SDK provider, not OpenAI chat completions); `prompt_cache_key` is undocumented.
+# Cache headers: none
+# Cache body: `cache_control`
+# Cache policy: explicit ephemeral `cache_control` breakpoints via orchestration prompt-templating config; implicit caching for OpenAI/Gemini-backed models.
+# Docs: https://help.sap.com/docs/sap-ai-core/generative-ai/prompt-caching
 name = "SAP AI Core"
 env = ["AICORE_SERVICE_KEY"]
 npm = "@jerome-benoit/sap-ai-provider-v2"

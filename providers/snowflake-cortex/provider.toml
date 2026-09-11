@@ -1,3 +1,8 @@
+# Cache key (chat): Use body `prompt_cache_key` (OpenAI models) / `cache_control` (Claude) — OpenAI SDK compatibility table lists `prompt_cache_key` as Supported for OpenAI models (Ignored for Claude/Other).
+# Cache headers: none
+# Cache body: `prompt_cache_key` (OpenAI models) / `cache_control` (Claude)
+# Cache policy: auto — OpenAI models implicit auto cache for 1024+ token prompts (no request changes); Claude via chat uses ephemeral `cache_control` breakpoints on content blocks (max 4, 5-min TTL); reads surface in usage.prompt_tokens_details.cached_tokens.
+# Docs: https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api
 name = "Snowflake Cortex"
 npm = "@ai-sdk/openai-compatible"
 api = "https://${SNOWFLAKE_ACCOUNT}.snowflakecomputing.com/api/v2/cortex/v1"

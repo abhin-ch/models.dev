@@ -1,3 +1,8 @@
+# Cache key (chat): Use headers/body none — OpenAI-compatible endpoint docs list no cache request params.
+# Cache headers: none
+# Cache body: none
+# Cache policy: auto — no native cache control documented; keep stable prefix first.
+# Docs: https://platform.sensenova.cn/docs
 name = "SenseNova (China)"
 npm = "@ai-sdk/openai-compatible"
 env = ["SENSENOVA_API_KEY"]

@@ -1,3 +1,8 @@
+# Cache key (chat): Use headers/body none — OpenAI-compatible chat endpoint docs list no cache request params.
+# Cache headers: none
+# Cache body: none
+# Cache policy: auto — no native cache control documented; keep stable prefix first.
+# Docs: https://www.scnet.cn/ac/openapi/doc/2.0/moduleapi/plans/token-plan.html
 # SCNet documents its OpenAI-compatible endpoint and OpenCode integration here:
 # https://www.scnet.cn/ac/openapi/doc/2.0/moduleapi/tools/opencode.html
 # Token Plan model catalog (accessed 2026-08-16):

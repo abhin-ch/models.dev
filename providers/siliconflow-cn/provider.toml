@@ -1,3 +1,8 @@
+# Cache key (chat): Use headers/body none — chat completions schema has no prompt_cache_key or cache_control; Cache Read pricing is a billing fact only.
+# Cache headers: none
+# Cache body: none
+# Cache policy: auto — server-side prefix cache, no client control; stable prefix first, Cache Read rates on hit; repeated text does not guarantee a hit (see usage cached_tokens / prompt_cache_hit_tokens).
+# Docs: https://www.siliconflow.com/blog/siliconflow-prompt-caching-api-costs
 name = "SiliconFlow (China)"
 env = ["SILICONFLOW_CN_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,8 @@
+# Cache key (chat): Use headers/body none — OpenAI-compatible gateway docs list no cache request params.
+# Cache headers: none
+# Cache body: none
+# Cache policy: auto — no native cache control; behavior follows the serving upstream, keep stable prefix first.
+# Docs: https://docs.salad.com/ai-gateway/explanation/overview
 name = "SaladCloud AI Gateway"
 env = ["SALAD_CLOUD_API_KEY"]
 npm = "@saladtechnologies-oss/ai-sdk-provider"
