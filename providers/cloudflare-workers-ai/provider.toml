@@ -1,3 +1,8 @@
+# Use headers: x-session-affinity for session and instance affinity, routing repeats at the tensor-holding instance
+# Use body: none (no cache field in the run or OpenAI-compatible chat request schema; prefix caching is automatic)
+# Prefix steps: keep a stable token prefix on prefix-caching models with identical params; include x-session-affinity on each request
+# Behavior: automatic prefix cache on select models; discounted cached input reported in usage
+# Docs: https://developers.cloudflare.com/workers-ai/features/prompt-caching/
 name = "Cloudflare Workers AI"
 env = ["CLOUDFLARE_ACCOUNT_ID", "CLOUDFLARE_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

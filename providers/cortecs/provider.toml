@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none (no Cortecs-native cache body field; caching is transparent at the serving-provider level and chat fields forward upstream)
+# Prefix steps: keep a stable prompt prefix with identical model and params; repeat the full prefix on each request
+# Behavior: backend-dependent hits surface as prompt_tokens_details.cached_tokens and bill at the backend cache-read rate
+# Docs: https://docs.cortecs.ai/routing/prompt-caching
 name = "Cortecs"
 env = ["CORTECS_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

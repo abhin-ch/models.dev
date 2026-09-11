@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none (no cache field in the chat request; prefix caching is automatic with no management flags)
+# Prefix steps: keep a stable prompt prefix and repeat the full conversation on each request
+# Behavior: automatic prefix cache; cached reads are free and reported as usage cached_tokens
+# Docs: https://www.coralbricks.ai/docs.md
 name = "CoralBricks"
 env = ["CORAL_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

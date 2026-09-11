@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none (no cache field in the chat request; supported_sampling_parameters covers only temperature/top_p/top_k/penalties/stop/seed)
+# Prefix steps: keep a stable prompt prefix with identical model and sampling params; repeat the full prefix on each request
+# Behavior: automatic SGLang prefix cache; hits bill at the per-model input_cache_read rate
+# Docs: https://llm.chutes.ai/v1/models
 name = "Chutes"
 env = ["CHUTES_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

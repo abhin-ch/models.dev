@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none (no cache field in the chat request; the reference lists messages/temperature/top_p/max_tokens/stream/stop/tools/response_format with n=1)
+# Prefix steps: keep a stable prompt prefix with identical model and params; repeat the full prefix on each request
+# Behavior: no documented cache behavior; nothing to configure
+# Docs: https://claudin.io/docs/api-reference/
 name = "Claudinio"
 env = ["CLAUDINIO_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

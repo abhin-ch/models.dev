@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none (no cache field in POST /openai/v1/chat/completions)
+# Prefix steps: keep a stable prompt prefix with identical model and params; repeat the full prefix on each request
+# Behavior: no documented cache behavior; nothing to configure
+# Docs: https://docs.sherlock.cloudferro.com/
 name = "CloudFerro Sherlock"
 env = ["CLOUDFERRO_SHERLOCK_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

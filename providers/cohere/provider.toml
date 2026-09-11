@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none (no cache field in the v2/chat request body: model/messages/tools/documents/response_format/safety_mode/max_tokens/stop_sequences/temperature/seed/penalties/k/p/logprobs/tool_choice/thinking/priority/strict_tools)
+# Prefix steps: keep a stable prompt prefix with identical model and params; repeat the full prefix on each request
+# Behavior: automatic inference cache; hits surface as usage.cached_tokens with no client control
+# Docs: https://docs.cohere.com/reference/chat
 name = "Cohere"
 env = ["COHERE_API_KEY"]
 npm = "@ai-sdk/cohere"

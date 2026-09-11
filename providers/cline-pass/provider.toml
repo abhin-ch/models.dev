@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none (no cache field in the chat request; Cached Read rates reflect backend-side caching)
+# Prefix steps: keep a stable prompt prefix with identical model and params; repeat the full prefix on each request
+# Behavior: automatic backend context caching with no request control
+# Docs: https://docs.cline.bot/getting-started/clinepass
 name = "ClinePass"
 env = ["CLINE_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,8 @@
+# Use headers: cf-aig-cache-key, cf-aig-cache-ttl, cf-aig-skip-cache for gateway response-cache control; cf-aig-cache-status reports HIT/MISS
+# Use body: full-body exact match forms the gateway cache key; the gateway forwards the body to the upstream provider untouched
+# Prefix steps: repeat the identical body, model, and auth with caching enabled; upstream prompt-cache hits follow the routed provider prefix rules
+# Behavior: gateway HIT requires an identical request while caching is enabled; upstream cache fields pass through to the routed provider
+# Docs: https://developers.cloudflare.com/ai-gateway/features/caching/
 name = "Cloudflare AI Gateway"
 env = ["CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID", "CLOUDFLARE_GATEWAY_ID"]
 npm = "ai-gateway-provider"

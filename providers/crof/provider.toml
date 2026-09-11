@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none (no cache field in the chat request; Supported Parameters covers only max_tokens/temperature/top_p/stop/seed/tools/reasoning_effort/response_format/repetition_penalty)
+# Prefix steps: keep a stable prompt prefix with identical model and params; repeat the full prefix on each request
+# Behavior: automatic backend reuse; hits surface as usage cached_tokens with no request control
+# Docs: https://crof.ai/docs.md
 name = "CrofAI"
 env = ["CROF_API_KEY"]
 npm = "@ai-sdk/openai-compatible"
