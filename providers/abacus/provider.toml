@@ -1,3 +1,8 @@
+# Prompt caching (chat): RouteLLM gateway forwards POST /v1/chat/completions body to the routed model; cache is the routed-model automatic prefix cache.
+# Use headers: none.
+# Use body: none — API reference defines no cache header or body field for chat.
+# To get a hit: reuse the same routed model with an identical stable prefix and unchanged tools/order; retry the identical prefix and confirm via the response usage block where reported.
+# Docs: https://abacus.ai/help/api
 name = "Abacus"
 npm = "@ai-sdk/openai-compatible"
 # Reasoning HTTP format (accessed 2026-06-25):

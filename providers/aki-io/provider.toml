@@ -1,3 +1,8 @@
+# Prompt caching (chat): EU-hosted OpenAI-compatible API forwards POST /openai/v1/chat/completions body to the requested open-weight model; unknown model IDs fall back to a default model.
+# Use headers: none.
+# Use body: none — chat params list model/messages/temperature/max_tokens/stream/stop with no cache key field; usage reports prompt_tokens/completion_tokens/total_tokens only.
+# To get a hit: use an exact model ID from GET /v1/models to avoid fallback, replay a stable prefix with the same model and unchanged order, and confirm via the response usage block where reported.
+# Docs: https://aki.io/docs/compatibility/openai-api-compatibility/
 name = "AKI.IO"
 env = ["AKI_IO_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,8 @@
+# Prompt caching (chat): automatic prefix cache on POST /v1/chat/completions on aiand infra; matching prefixes reuse cached input automatically.
+# Use headers: none — `X-Aiand-Metrics: true` opts into cost headers on non-streaming responses; `X-Request-ID` / `X-Model` / `X-Reasoning-Effort` report tracing, resolved model, and applied effort, not cache.
+# Use body: none — chat request tables list model/messages/stream/temperature/top_p/tools/tool_choice/reasoning_effort/user and related sampling fields with no cache key field.
+# To get a hit: reuse the same model with an identical stable prefix and unchanged tools/order plus matching reasoning_effort; confirm via usage.prompt_tokens_details.cached_tokens; for streams include `stream_options: { "include_usage": true }` and read the trailing usage event.
+# Docs: https://docs.aiand.com/api/chat-completions/
 name = "ai&"
 npm = "@ai-sdk/openai-compatible"
 env = ["AIAND_API_KEY"]

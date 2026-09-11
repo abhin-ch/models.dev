@@ -1,3 +1,8 @@
+# Prompt caching (chat): OpenAI-style API forwards POST /v1 chat body from https://apihub.agnes-ai.com/v1 to the backing model; cache is the upstream automatic prefix cache.
+# Use headers: none.
+# Use body: none — overview defines no cache header or body field; auth uses `Authorization: Bearer` only.
+# To get a hit: reuse the same model with an identical stable prefix and unchanged tools/order; retry the identical prefix and confirm via the response usage block where reported.
+# Docs: https://agnes-ai.com/doc
 name = "Agnes AI"
 env = ["AGNES_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

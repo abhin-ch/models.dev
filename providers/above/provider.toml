@@ -1,3 +1,8 @@
+# Prompt caching (chat): gateway routes POST /v1/messages and POST /v1/chat/completions (alias delegating to messages) to the selected model; cache is the upstream provider automatic prefix cache with the full discount reflected in billing.
+# Use headers: none — `x-session-id` groups usage reporting only; `x-mode`/`x-model` select routing, not cache.
+# Use body: none — request tables list messages/max_tokens/stream/temperature/top_p/tools/tool_choice/response_format with no cache field; `model` selects routing.
+# To get a hit: pin the same model with direct mode and replay a stable prefix with unchanged tools/order; confirm per response via `x-input-cache-hit-rate` / `x-input-cache-hit-tokens` plus `x-model-used` and `x-cost-usd`; streaming responses omit cost headers.
+# Docs: https://above.dev/docs
 name = "above.dev"
 env = ["ABOVE_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

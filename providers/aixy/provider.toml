@@ -1,3 +1,8 @@
+# Prompt caching (chat): BYOK gateway routes POST /v1/chat/completions by provider-qualified model (e.g. `openai/gpt-4.1-mini`) or `aixy/<routing-model>`; matching native protocols are preserved, otherwise supported stateless conversations are translated.
+# Use headers: none — `X-Request-ID` traces, `X-Aixy-Client` labels attribution without reaching upstream, `X-Provider` selects provider without changing the model ID; none control cache.
+# Use body: none — ChatCompletionRequest requires model/messages with optional stream/temperature/max_tokens; advanced fields without a supported translation are rejected, so no cache key field exists.
+# To get a hit: reuse the same provider-qualified model with an identical stable prefix and unchanged order; retry the identical prefix and confirm via the response usage block where the upstream provider reports it.
+# Docs: https://docs.aixy-gateway.com/api-reference/inference/create-a-chat-completion.md
 name = "Aixy"
 env = ["AIXY_API_KEY"]
 npm = "@ai-sdk/openai-compatible"
