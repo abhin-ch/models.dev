@@ -1,3 +1,8 @@
+# Cache key (chat): none — closed supported-params list (model/messages/stream/temperature/max_tokens/tools/response_format/top_p/seed) omits key and cache usage.
+# Cache headers: none.
+# Cache policy: no documented cache mechanism, no hit expected; keep stable prefix for any future automatic behavior.
+# Cache verification: no cache usage fields documented; nothing to confirm hits against.
+# Docs: https://docs.evroc.com/products/think/openai-compatibility.html
 name = "evroc"
 # Reasoning HTTP format (accessed 2026-06-25): POST /v1/chat/completions.
 # evroc documents OpenAI compatibility but no toggle, effort, or budget field;

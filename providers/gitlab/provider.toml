@@ -1,3 +1,8 @@
+# Cache key (chat): none — Duo proxy (OpenAI Chat/Responses + Anthropic Messages) documents no chat key; Anthropic caching uses `cache_control`, no key field.
+# Cache headers: none.
+# Cache policy: no chat key; Anthropic routes use SDK-managed `cache_control` breakpoints (trailing messages, 20-block lookback); OpenAI routes use automatic prefix caching; keep stable prefix on same model.
+# Cache verification: no cached-token usage signal documented.
+# Docs: https://docs.gitlab.com/user/duo_agent_platform/
 # Reasoning controls (sources accessed 2026-09-04):
 # - OpenAI Chat: POST /ai/v1/proxy/openai/v1/chat/completions uses top-level
 #   `reasoning_effort`; Responses: POST /ai/v1/proxy/openai/v1/responses uses

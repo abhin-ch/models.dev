@@ -1,3 +1,8 @@
+# Cache key (chat): body `cache_control` on Anthropic routes (root/per-block) — OpenAPI defines no `prompt_cache_key`; semantic response cache uses a `cache_key` header instead of a prompt-prefix key.
+# Cache headers: none for prompt prefix (`cache_key` header addresses the semantic response cache, not prompt prefix).
+# Cache policy: automatic provider-native prefix caching with sticky routing via first-system/first-user hash; keep static prefix first on same model/conversation; Anthropic routes use `cache_control` (5m/1h).
+# Cache verification: prompt_tokens_details.cached_tokens; catalog cache read/write rates.
+# Docs: https://docs.fastrouter.ai/prompt-caching
 name = "FastRouter"
 # Reasoning HTTP format (accessed 2026-06-25): POST /api/v1/chat/completions.
 # Controls are route-specific; use live GET /api/v1/models metadata and each

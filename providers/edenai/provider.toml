@@ -1,3 +1,8 @@
+# Cache key (chat): body `prompt_cache_key` — docs define `prompt_cache_key` plus `prompt_cache_retention` and `prompt_cache_breakpoint`/`cache_control` markers, with a per-endpoint `supports_prompt_caching` catalog.
+# Cache headers: x-session-id, x-claude-code-session-id, x-session-affinity, session-id — sticky routing affinity (body session_id not forwarded).
+# Cache policy: automatic prefix caching on cache-capable endpoints; keep stable prefix first, repeat exact prefix with same session_id/`prompt_cache_key`, explicit markers where needed.
+# Cache verification: usage cached_tokens/cache_write_tokens.
+# Docs: https://www.edenai.co/docs/v3/llms/prompt-caching
 # Catalog: https://api.edenai.run/v3/models
 # Reasoning: reasoning_effort = none|minimal|low|medium|high|xhigh|max 
 # Pricing: list_pricing, USD per token; the sibling `pricing` field is discounted

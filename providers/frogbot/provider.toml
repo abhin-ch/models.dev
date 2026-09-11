@@ -1,3 +1,8 @@
+# Cache key (chat): scoped Google/Vertex `cached_content` (cachedContents/{id}) — `prompt_cache_key` acts as the cache resource on those routes when cached_content omitted.
+# Cache headers: none.
+# Cache policy: scoped Google/Vertex-only; supply cached_content or `prompt_cache_key` on those routes with cache managed directly via Google; other models get no prefix-cache hit.
+# Cache verification: cache managed directly via Google; no provider-level cached-token signal documented.
+# Docs: https://docs.frogbot.ai/api-reference/chat-completions
 name = "FrogBot"
 # Reasoning HTTP format (accessed 2026-06-25): POST /api/v1/chat/completions.
 # JSON reasoning_effort: "low" | "medium" | "high"; Anthropic models also

@@ -1,3 +1,8 @@
+# Cache key (chat): none — Messages surface (POST /v1/messages) defines no key field; provider publishes no request schema carrying a key.
+# Cache headers: none.
+# Cache policy: no chat key; Anthropic-style `cache_control` breakpoints where upstream supports them, otherwise automatic only; keep stable prefix on same model.
+# Cache verification: no cached-token usage signal published.
+# Docs: https://freemodel.dev
 name = "FreeModel"
 # Reasoning HTTP format (accessed 2026-06-25): POST /v1/messages.
 # FreeModel publishes no request schema for toggle, effort, or budget controls;

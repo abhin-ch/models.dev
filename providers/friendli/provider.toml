@@ -1,3 +1,8 @@
+# Cache key (chat): none — ServerlessChatCompletionBody (required model/messages; reasoning_effort/budget listed) defines no key field.
+# Cache headers: none (X-Friendli-Team is team routing, not cache).
+# Cache policy: automatic prefix caching; keep stable exact prefix on same model with no client key or marker.
+# Cache verification: usage.prompt_tokens_details.cached_tokens; Cached Input pricing.
+# Docs: https://friendli.ai/docs/openapi/model-apis/chat-completions
 name = "Friendli"
 # Reasoning HTTP format (accessed 2026-08-29): POST /serverless/v1/chat/completions.
 # Toggle: chat_template_kwargs.enable_thinking = true | false; support is model-specific.

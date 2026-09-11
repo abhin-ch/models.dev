@@ -1,3 +1,8 @@
+# Cache key (chat): none — chat schema (model/messages/stream/temperature/max_tokens/tools/tool_choice/response_format/enable_thinking/thinking_budget) defines no cache-key field; usage reports no cached fields.
+# Cache headers: none.
+# Cache policy: implicit automatic cache reads only with no client key or marker; keep stable prefix on same model.
+# Cache verification: no cached-token usage fields; confirm through implicit-cache-read billing.
+# Docs: https://docs.empiriolabs.ai/api-reference/api-reference/chat-completions/create-chat-completion.md
 name = "EmpirioLabs AI"
 env = ["EMPIRIOLABS_API_KEY"]
 npm = "@ai-sdk/openai-compatible"
