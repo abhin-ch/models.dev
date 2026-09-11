@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none — OpenAI-compatible API-Inference publishes no cache params, cached-token usage, or cache billing.
+# Auto cache: none documented.
+# Steps: none documented.
+# Docs: https://modelscope.cn/docs/model-service/API-Inference/intro
 name = "ModelScope"
 env = ["MODELSCOPE_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

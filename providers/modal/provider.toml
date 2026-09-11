@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none — gateway exposes OpenAI-compatible Chat/Responses/Messages with no Modal-documented cache controls; per-token billing, no cache-key schema.
+# Auto cache: none documented at the gateway; upstream-matched prefixes may reuse cache where the backing engine supports it.
+# Steps: none documented; keep the prefix stable for the backing engine.
+# Docs: https://modal.com/docs/guide/endpoints
 # Modal serves the OpenAI Chat Completions API through its inference gateway.
 # Proxy tokens can be combined as `wk-....ws-...` for bearer authentication.
 # https://modal.com/docs/guide/endpoints

@@ -1,3 +1,8 @@
+# Use headers: none — X-Msh-Request-Nonce is request-signature only, not cache routing.
+# Use body: `prompt_cache_key` — OpenAPI schema documents top-level `prompt_cache_key` (session/task id; required for Kimi Code Plan, recommended for multi-turn); hits surface in usage.cached_tokens.
+# Auto cache: key-assisted cache, not billing-only; prior prompt must exceed 256 tokens to seed cache.
+# Steps: one stable session/task id per conversation, same value on resume; fixed large context first in messages.
+# Docs: https://platform.moonshot.ai/docs/api/chat
 name = "Moonshot AI"
 env = ["MOONSHOT_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

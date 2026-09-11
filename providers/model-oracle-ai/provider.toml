@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none — decision-engine router documents no cache controls; only reasoning_effort is forwarded/translated to the selected upstream provider.
+# Auto cache: none documented at the router; upstream cache applies where the selected provider supports it.
+# Steps: none documented; keep the prefix stable for whatever upstream serves the request.
+# Docs: https://modeloracle.com/setup/
 # OpenAI-compatible endpoint and public model aliases:
 # https://modeloracle.com/setup/ (accessed 2026-07-07)
 # API contract and routing behavior:

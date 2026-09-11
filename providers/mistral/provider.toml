@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: `prompt_cache_key` — documented top-level body field with curl example (stable conversation/session/workflow ID); hits surface in usage.prompt_tokens_details.cached_tokens, billed at 10% input price.
+# Auto cache: key-assisted prefix cache, not billing-only; 64-token blocks, prompts under 64 tokens never hit.
+# Steps: reuse one stable key per conversation; preserve the shared prompt prefix across turns.
+# Docs: https://docs.mistral.ai/studio/conversations/advanced/prompt-caching
 name = "Mistral"
 env = ["MISTRAL_API_KEY"]
 npm = "@ai-sdk/mistral"

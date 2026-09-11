@@ -1,3 +1,8 @@
+# Use headers: `x-session-id` — same conversation id as header carrier alternative (header takes precedence when both key forms are present).
+# Use body: `prompt_cache_key` — documented top-level body field for sticky worker routing; hits surface in usage.prompt_tokens_details.cached_tokens.
+# Auto cache: key-assisted routing cache, not billing-only; optional cache_ttl 5m/30m/1h/6h/24h.
+# Steps: one key per conversation incl. retries, never a shared app-wide value; stable content first, byte-identical prefix.
+# Docs: https://docs.morphllm.com/sdk/components/caching
 name = "Morph"
 env = ["MORPH_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

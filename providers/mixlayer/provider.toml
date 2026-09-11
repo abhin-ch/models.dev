@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none — Chat Completions request schema lists no `prompt_cache_key` (field exists only on Responses as an echoed value).
+# Auto cache: billing-only automatic prefix cache; hits surface in usage.prompt_tokens_details.cached_tokens at the model cache-read rate, no client key on chat.
+# Steps: keep the shared prefix stable across requests to earn cached-input billing.
+# Docs: https://docs.mixlayer.com/api-reference/inference-ap-is/chat-completions/chat-completions
 # POST /v1/chat/completions uses $.thinking = true|false. The accepted alias
 # $.reasoning_effort = "low"|"medium"|"high" maps only to binary enablement;
 # the level is currently ignored/reserved, so it is not an effort control.

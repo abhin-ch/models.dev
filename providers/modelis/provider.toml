@@ -1,3 +1,8 @@
+# Use headers: none
+# Use body: none — byte-forwarding local proxy to upstream GPT/Claude/Gemini with flat per-call billing; no cache controls documented.
+# Auto cache: none documented locally; upstream-matched prefixes may hit upstream cache where supported.
+# Steps: none documented; keep the prefix stable for the upstream model.
+# Docs: https://github.com/modelishub/modelis-openai
 name = "Modelis"
 npm = "@ai-sdk/openai-compatible"
 env = ["MODELIS_API_KEY"]
