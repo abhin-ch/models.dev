@@ -1,3 +1,8 @@
+# Prompt caching (chat): No documented prompt caching; plain OpenAI-compatible routing gateway across independent operators.
+# Use headers: none.
+# Use body: none.
+# To get a hit: No documented cache hit path; keep stable shared prefixes so operator-side reuse can apply.
+# Docs: https://blueclaw.network/how-it-works.html
 name = "Blue Claw"
 npm = "@ai-sdk/openai-compatible"
 api = "https://openai.blueclaw.network/v1"

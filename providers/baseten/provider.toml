@@ -1,3 +1,8 @@
+# Prompt caching (chat): No documented prompt-caching request control; responses report backend-side reuse via usage.prompt_tokens_details.cached_tokens.
+# Use headers: none.
+# Use body: none. ChatCompletionRequest sets additionalProperties:false with no `prompt_cache_key` property; unknown fields fail with 400.
+# To get a hit: Keep stable prefixes append-only on the same model; confirm via usage.prompt_tokens_details.cached_tokens.
+# Docs: https://docs.baseten.co/reference/inference-api/chat-completions
 name = "Baseten"
 npm = "@ai-sdk/openai-compatible"
 # Raw HTTP reasoning controls (sources accessed 2026-06-25):

@@ -1,3 +1,8 @@
+# Prompt caching (chat): No documented prompt caching; API reference lists no cache parameter and CompletionRequest defines model/messages and related fields with no cache property.
+# Use headers: none.
+# Use body: none.
+# To get a hit: No documented cache hit path; identical-prefix reuse only if the upstream backend applies it.
+# Docs: https://docs.arcee.ai/api-reference/chat-completion
 name = "Arcee"
 npm = "@ai-sdk/openai-compatible"
 env = ["ARCEE_API_KEY"]

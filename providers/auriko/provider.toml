@@ -1,3 +1,8 @@
+# Prompt caching (chat): OpenAI-compatible routing gateway; chat completions schema defines `prompt_cache_key` as a caching identifier with upstream-dependent behavior.
+# Use headers: none.
+# Use body: `prompt_cache_key` (string, caching identifier).
+# To get a hit: Reuse the same `prompt_cache_key` for requests sharing a prompt prefix; keep stable content at the start.
+# Docs: https://docs.auriko.ai/api-reference/chat-completions
 name = "Auriko"
 env = ["AURIKO_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

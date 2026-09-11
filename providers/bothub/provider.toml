@@ -1,3 +1,8 @@
+# Prompt caching (chat): No documented gateway-level prompt-caching control; cache behavior follows the routed upstream model where supported.
+# Use headers: none.
+# Use body: none.
+# To get a hit: Keep stable shared prefixes on the same model; no gateway-level key control is documented.
+# Docs: https://bothub.ru/models
 name = "Bothub"
 env = ["BOTHUB_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

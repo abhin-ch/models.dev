@@ -1,3 +1,8 @@
+# Prompt caching (chat): No documented prompt-caching request control; responses report backend-side reuse via usage cached_tokens and cache_write_tokens.
+# Use headers: none.
+# Use body: none. ChatCompletionRequest omits `prompt_cache_key` and allows additional properties, so unknown fields have no documented cache effect.
+# To get a hit: Keep stable shared prefixes append-only on the same model; confirm via usage cached_tokens.
+# Docs: https://api.berget.ai/openapi.json
 name = "Berget.AI"
 env = ["BERGET_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,8 @@
+# Prompt caching (chat): Automatic prefix caching; GPT-5.6 and later add keyed matching plus explicit breakpoints.
+# Use headers: none.
+# Use body: `prompt_cache_key`, `prompt_cache_options` (mode implicit|explicit, ttl 30m), `prompt_cache_breakpoint`, `prompt_cache_retention` (pre-5.6 retention only; breakpoint fields return 400 before GPT-5.6).
+# To get a hit: Keep the first 1024+ tokens identical and append-only; reuse one key per shared prefix; partition keys past ~15 rpm per prefix plus key; confirm via usage.prompt_tokens_details.cached_tokens plus cache_write_tokens on GPT-5.6 and later Standard deployments.
+# Docs: https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/prompt-caching
 name = "Azure Cognitive Services"
 env = ["AZURE_COGNITIVE_SERVICES_RESOURCE_NAME", "AZURE_COGNITIVE_SERVICES_API_KEY"]
 npm = "@ai-sdk/azure"

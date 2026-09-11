@@ -1,3 +1,8 @@
+# Prompt caching (chat): No documented prompt-caching API; local OpenAI-compatible server with backend-dependent automatic KV reuse.
+# Use headers: none.
+# Use body: none.
+# To get a hit: Keep shared prefixes stable on the same loaded backend and model; no key-based control is documented.
+# Docs: https://github.com/AtomicBot-ai/Atomic-Chat
 name = "Atomic Chat"
 env = ["ATOMIC_CHAT_API_KEY"]
 npm = "@ai-sdk/openai-compatible"
