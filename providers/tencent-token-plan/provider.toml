@@ -1,3 +1,8 @@
+# Cache key (chat): none — Token Plan overview documents OpenAI/Anthropic base URLs with no cache-key params.
+# Use headers: none
+# Use body: none
+# Cache policy: subscription gateway with no client cache control; keep system prompt and leading messages byte-identical, append new content at the end.
+# Docs: https://cloud.tencent.com/document/product/1823/130060
 name = "Tencent Token Plan"
 env = ["TENCENT_TOKEN_PLAN_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

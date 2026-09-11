@@ -1,3 +1,8 @@
+# Cache key (chat): none — shared-models page lists only POST /chat/completions with no cache-key param.
+# Use headers: none
+# Use body: none
+# Cache policy: no client cache control; keep system prompt and leading messages byte-identical, append new content at the end, avoid reordering or mid-prefix edits.
+# Docs: https://docs.stackit.cloud/products/data-and-ai/ai-model-serving/basics/available-shared-models
 name = "STACKIT"
 env = ["STACKIT_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

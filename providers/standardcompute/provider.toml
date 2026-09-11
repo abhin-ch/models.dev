@@ -1,3 +1,8 @@
+# Cache key (chat): none — models page documents routing only, with no chat cache-key param.
+# Use headers: none
+# Use body: none
+# Cache policy: no client control; router biases to recently used models/providers so downstream caches stay warm — pin model selection when possible, keep prefix byte-identical and append-only.
+# Docs: https://standardcompute.com/models
 # Flat-rate smart-routing gateway: per-token cost is $0 because pricing is
 # subscription-based (flat monthly tiers, https://standardcompute.com/pricing,
 # accessed 2026-08-24). The single "standardcompute" model id routes each

@@ -1,3 +1,8 @@
+# Cache key (chat): none — InstaGen API reference lists only model/messages endpoints with no cache-key params.
+# Use headers: none
+# Use body: none
+# Cache policy: no client cache control; any server-side prefix reuse is automatic — keep system prompt and leading messages byte-identical, append new content at the end.
+# Docs: https://submodel.gitbook.io/docs/instagen/api-reference
 name = "submodel"
 env = ["SUBMODEL_INSTAGEN_ACCESS_KEY"]
 npm = "@ai-sdk/openai-compatible"
