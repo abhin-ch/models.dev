@@ -1,4 +1,6 @@
-# Prompt cache (chat): NATIVE_OTHER — explicit cache_control breakpoints for Anthropic plus implicit prefix caching for OpenAI/Gemini-backed models.
+# Cache key (chat): send prompt_cache_key — docs define cache_control as a tolerated extension on the OpenAI chat/completions protocol (explicitly addable, no 400); implicit caching for OpenAI/Gemini-backed models.
+# Cache headers: none
+# Cache policy: Anthropic models need cache_control ephemeral breakpoints (min 1024 tokens Sonnet/Opus, 2048 Haiku); OpenAI/Gemini-backed models cache implicitly on repeated identical prefix; verify via prompt_tokens_details.cached_tokens / cache_read_input_tokens.
 # Docs: https://docs.jiekou.ai/docs/feature/prompt-caching.md
 name = "Jiekou.AI"
 env = ["JIEKOU_API_KEY"]

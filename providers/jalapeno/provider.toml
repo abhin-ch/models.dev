@@ -1,4 +1,6 @@
-# Prompt cache (chat): SUPPORTS — automatic prefix caching plus optional prompt_cache_key routing hint; hits reported via usage.prompt_tokens_details.cached_tokens.
+# Cache key (chat): send prompt_cache_key — documented routing hint in chat payload (example sends prompt_cache_key) that pins prefix-hash routing to improve hit rate.
+# Cache headers: none
+# Cache policy: exact-prefix match required; send stable prompt_cache_key per workload; hits reported via usage.prompt_tokens_details.cached_tokens; cache is org-scoped.
 # Docs: https://www.jalapeno-cloud.ai/docs/inference/features/prompt-caching
 name = "Jalapeno Cloud"
 env = ["JALAPENO_API_KEY"]

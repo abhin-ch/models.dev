@@ -1,5 +1,7 @@
-# Prompt cache (chat): UNKNOWN — serverless OpenAI-compatible API; docs cover setup and basic chat only, no cache fields or caching behavior.
-# Docs: https://docs.inceptron.io
+# Cache key (chat): strip prompt_cache_key — API ref request-body table is closed (model/messages/temperature/max_tokens/stream/top_p/n/stop/tools/tool_choice); usage reports prompt/completion/total tokens only.
+# Cache headers: none
+# Cache policy: no documented prompt cache; identical-prefix retries rely on upstream implicit caching only.
+# Docs: https://docs.inceptron.io/API%20Reference/chat-completions
 name = "Inceptron"
 npm = "@ai-sdk/openai-compatible"
 env = ["INCEPTRON_API_KEY"]

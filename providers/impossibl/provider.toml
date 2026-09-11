@@ -1,4 +1,6 @@
-# Prompt cache (chat): NATIVE_OTHER — automatic prefix caching on most routes; Anthropic needs cache_control breakpoint, no prompt_cache_key field.
+# Cache key (chat): send prompt_cache_key — gateway tolerates extra cache fields (cache_control accepted+ignored on non-Anthropic routes, no 400); automatic prefix caching on most routes.
+# Cache headers: none
+# Cache policy: repeat byte-identical prefix; Anthropic routes need cache_control ephemeral breakpoint (min ~1024 tokens, 5m TTL refreshed on hit, 1h via ttl); verify via GET /v1/requests cached_input_tokens.
 # Docs: https://impossibl.com/docs/prompt-caching.md
 name = "Impossibl"
 npm = "@ai-sdk/openai-compatible"

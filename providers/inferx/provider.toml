@@ -1,5 +1,7 @@
-# Prompt cache (chat): UNKNOWN — no public API reference; endpoints page lists models only, no cache behavior documented.
-# Docs: https://model.inferx.net/endpoints
+# Cache key (chat): strip prompt_cache_key — confirmed public interface documents only OpenAI-shaped model/messages/stream request; no cache params or cached-token usage published.
+# Cache headers: none
+# Cache policy: no documented prompt cache; identical-prefix retries rely on upstream implicit caching only.
+# Docs: https://inferx.net/docs/api-reference
 name = "InferX"
 env = ["INFERX_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

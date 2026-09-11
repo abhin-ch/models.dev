@@ -1,4 +1,6 @@
-# Prompt cache (chat): NATIVE_OTHER — automatic prefix cache with no request fields; per-model supports_prompt_cache flag with cache read/write rates.
+# Cache key (chat): strip prompt_cache_key — no request cache fields; SDK docs pass extensions via extra_body; caching is server-side per-model.
+# Cache headers: none
+# Cache policy: automatic prefix cache on models with metadata supports_prompt_cache=true, billed at cache read/write prices; repeat byte-identical prefix.
 # Docs: https://io.net/docs/reference/ai-models/get-models-list
 name = "IO.NET"
 env = ["IOINTELLIGENCE_API_KEY"]

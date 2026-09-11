@@ -1,5 +1,7 @@
-# Prompt cache (chat): SUPPORTS — automatic prefix caching with discounted cached-input rates, reported via usage.prompt_tokens_details.cached_tokens.
-# Docs: https://docs.inceptionlabs.ai/get-started/models
+# Cache key (chat): strip prompt_cache_key — OpenAPI ChatCompletionRequest enumerates known fields with no prompt_cache_key; extra params go via extra_body passthrough.
+# Cache headers: none
+# Cache policy: automatic prefix cache; hits reported as usage.prompt_tokens_details.cached_tokens.
+# Docs: https://docs.inceptionlabs.ai/api-reference/chat/create-a-chat-completion
 name = "Inception"
 env = ["INCEPTION_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

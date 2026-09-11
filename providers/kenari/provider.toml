@@ -1,4 +1,6 @@
-# Prompt cache (chat): UNKNOWN — site and docs unreachable; no cache params or caching behavior verifiable.
+# Cache key (chat): strip prompt_cache_key — site and docs unreachable (connection failed); no cache params or cached-token usage documented; third-party report confirms plain OpenAI-compatible chat completions only.
+# Cache headers: none
+# Cache policy: no documented prompt cache; identical-prefix retries rely on upstream implicit caching only.
 # Docs: https://kenari.id/docs
 name = "Kenari"
 npm = "@ai-sdk/openai-compatible"

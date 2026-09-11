@@ -1,4 +1,6 @@
-# Prompt cache (chat): UNKNOWN — OpenAI-compatible API documents no prompt-cache params; usage reports prompt/completion/total tokens only.
+# Cache key (chat): strip prompt_cache_key — docs specify OpenAI request/response shape with usage of prompt/completion/total tokens only; no cache params or cached-token reporting.
+# Cache headers: none
+# Cache policy: no documented prompt cache; identical-prefix retries rely on upstream implicit caching only.
 # Docs: https://iteracompute.com/docs.html
 # IteraCompute exposes an OpenAI-compatible API through @ai-sdk/openai-compatible.
 # Authentication uses ITERACOMPUTE_API_KEY; the API base URL is https://api.iteracompute.com/v1.
