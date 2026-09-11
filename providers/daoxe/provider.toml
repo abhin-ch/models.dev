@@ -1,3 +1,8 @@
+# Prompt cache (chat): no documented cache behavior.
+# Use body: none — catalog and pricing docs define no cache request field.
+# Use headers: none.
+# Steps: no documented path to a cache hit; the API exposes no prefix-cache behavior.
+# Docs: https://daoxe.com/pricing
 # Public model catalog and pricing: https://daoxe.com/pricing
 # OpenAI-compatible API base; GET /models requires a DaoXE API key.
 name = "DaoXE"

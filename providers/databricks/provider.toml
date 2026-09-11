@@ -1,3 +1,8 @@
+# Prompt cache (chat): native breakpoints on hosted Claude models.
+# Use body: `cache_control` with `{type: ephemeral}` on stable messages/tools content.
+# Use headers: none.
+# Steps: keep identical prefixes on the same model with breakpoints set; verify via cache-hit usage fields.
+# Docs: https://docs.databricks.com/aws/en/machine-learning/model-serving/score-foundation-models
 name = "Databricks"
 npm = "@ai-sdk/openai-compatible"
 # Raw Chat is POST `/serving-endpoints/{model}/invocations`: GPT/Gemini 3 use

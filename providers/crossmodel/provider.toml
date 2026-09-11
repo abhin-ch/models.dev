@@ -1,3 +1,8 @@
+# Prompt cache (chat): no gateway cache; cached_tokens reflects the backing provider only.
+# Use body: none — docs define no cache request field across chat/responses/messages surfaces.
+# Use headers: none.
+# Steps: keep byte-identical prefixes on the same model to allow upstream prefix caches to match; verify via usage cached_tokens.
+# Docs: https://www.crossmodel.ai/docs/api-reference/chat
 # CrossModel is a multi-provider gateway with three inbound surfaces: OpenAI
 # Chat Completions (/v1/chat/completions), OpenAI Responses (/v1/responses), and
 # Anthropic Messages (/v1/messages). Reasoning controls are model-dependent and

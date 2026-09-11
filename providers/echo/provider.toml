@@ -1,3 +1,8 @@
+# Prompt cache (chat): no documented cache behavior.
+# Use body: none — docs define no cache field and usage carries no cache fields.
+# Use headers: none.
+# Steps: no documented path to a cache hit; the API exposes no prefix-cache behavior.
+# Docs: https://echo.tracerml.ai/docs/api
 name = "Echo"
 env = ["ECHO_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

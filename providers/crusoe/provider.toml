@@ -1,3 +1,8 @@
+# Prompt cache (chat): automatic MemoryAlloy cache-aware routing with no request cache field.
+# Use body: none — the chat API defines no cache request field.
+# Use headers: none.
+# Steps: repeat identical prefixes on the same model to route to warm nodes; verify via cached-tokens usage.
+# Docs: https://docs.crusoecloud.com/serverless-inference/overview
 name = "Crusoe"
 env = ["CRUSOE_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,8 @@
+# Prompt cache (chat): no documented cache behavior.
+# Use body: none — model-api docs define no cache field.
+# Use headers: none.
+# Steps: no documented path to a cache hit; the API exposes no prefix-cache behavior.
+# Docs: https://docs.ebtech.com/ai/model-api.html
 # https://docs.ebtech.com/ai/model-api.html (accessed 2026-07-10)
 name = "EBCloud"
 npm = "@ai-sdk/openai-compatible"

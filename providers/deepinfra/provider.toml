@@ -1,3 +1,8 @@
+# Prompt cache (chat): explicit key plus automatic prefix match.
+# Use body: `prompt_cache_key` string plus `prompt_cache_retention` via `prompt_cache_options` (5-minute or 1-hour retention).
+# Use headers: none.
+# Steps: keep stable content first with byte-identical prefix on the same model; verify via usage `prompt_tokens_details.cached_tokens`.
+# Docs: https://docs.deepinfra.com/chat/prompt-caching
 # Reasoning HTTP format (accessed 2026-06-25):
 # OpenAI Chat: POST https://api.deepinfra.com/v1/openai/chat/completions
 # (also POST /v1/chat/completions). Toggle: reasoning.enabled = true|false;

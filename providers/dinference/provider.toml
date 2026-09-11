@@ -1,3 +1,8 @@
+# Prompt cache (chat): no documented cache behavior.
+# Use body: none — request docs list no cache field for POST /v1/chat/completions.
+# Use headers: none.
+# Steps: no documented path to a cache hit; the API exposes no prefix-cache behavior.
+# Docs: https://dinference.com/docs
 name = "DInference"
 env = ["DINFERENCE_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

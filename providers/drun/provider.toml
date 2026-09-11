@@ -1,3 +1,8 @@
+# Prompt cache (chat): no documented cache behavior.
+# Use body: none — public docs define no cache field for POST /v1/chat/completions.
+# Use headers: none.
+# Steps: no documented path to a cache hit; the API exposes no prefix-cache behavior.
+# Docs: https://www.d.run
 name = "D.Run (China)"
 npm = "@ai-sdk/openai-compatible"
 # Raw HTTP is POST `/v1/chat/completions`. The public d.run documentation and

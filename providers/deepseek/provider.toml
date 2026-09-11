@@ -1,3 +1,8 @@
+# Prompt cache (chat): automatic on-disk context caching, enabled by default.
+# Use body: none — the chat API defines no cache request field.
+# Use headers: none.
+# Steps: fully match a persisted cache-prefix unit (request-boundary, common-prefix, or fixed-interval unit); verify via usage `prompt_cache_hit_tokens` versus `prompt_cache_miss_tokens`.
+# Docs: https://api-docs.deepseek.com/guides/kv_cache
 name = "DeepSeek"
 env = ["DEEPSEEK_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,8 @@
+# Prompt cache (chat): automatic prefix cache plus per-family controls.
+# Use body: `cache_control` with 5m/1h ttl for Anthropic models and `prompt_cache_retention` in_memory/24h for OpenAI models (1024+ tokens).
+# Use headers: `X-Model-Affinity` to pin multi-turn turns to one model for reuse.
+# Steps: keep exact token-prefix match; Anthropic via router or manual ephemeral breakpoint; verify via cached usage.
+# Docs: https://docs.digitalocean.com/products/inference/how-to/use-prompt-caching/
 name = "DigitalOcean"
 env = ["DIGITALOCEAN_ACCESS_TOKEN"]
 npm = "@ai-sdk/openai-compatible"
