@@ -1,6 +1,7 @@
-# Cache key (chat): strip prompt_cache_key — confirmed public interface documents only OpenAI-shaped model/messages/stream request; no cache params or cached-token usage published.
+# Cache key (chat): Use headers/body none — public interface documents only OpenAI-shaped model/messages/stream request with no cache params.
 # Cache headers: none
-# Cache policy: no documented prompt cache; identical-prefix retries rely on upstream implicit caching only.
+# Cache policy: no documented prompt cache; replay requests with a stable byte-identical prefix on the same model.
+# Cache verify: no cached-token usage published — treat as uncached.
 # Docs: https://inferx.net/docs/api-reference
 name = "InferX"
 env = ["INFERX_API_KEY"]

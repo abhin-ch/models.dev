@@ -1,6 +1,7 @@
-# Cache key (chat): strip prompt_cache_key — API ref request-body table is closed (model/messages/temperature/max_tokens/stream/top_p/n/stop/tools/tool_choice); usage reports prompt/completion/total tokens only.
+# Cache key (chat): Use headers/body none — request-body table is closed (model/messages/temperature/max_tokens/stream/top_p/n/stop/tools/tool_choice); unknown fields return 400.
 # Cache headers: none
-# Cache policy: no documented prompt cache; identical-prefix retries rely on upstream implicit caching only.
+# Cache policy: no documented prompt cache; replay requests with a stable byte-identical prefix on the same model.
+# Cache verify: usage reports prompt/completion/total tokens only — treat as uncached.
 # Docs: https://docs.inceptron.io/API%20Reference/chat-completions
 name = "Inceptron"
 npm = "@ai-sdk/openai-compatible"

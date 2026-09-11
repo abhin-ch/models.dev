@@ -1,6 +1,7 @@
-# Cache key (chat): strip prompt_cache_key — site and docs unreachable (connection failed); no cache params or cached-token usage documented; third-party report confirms plain OpenAI-compatible chat completions only.
+# Cache key (chat): Use headers/body none — provider site and docs unreachable (connection failed); third-party report confirms plain OpenAI-compatible chat completions with no cache params.
 # Cache headers: none
-# Cache policy: no documented prompt cache; identical-prefix retries rely on upstream implicit caching only.
+# Cache policy: no documented prompt cache; replay requests with a stable byte-identical prefix on the same model.
+# Cache verify: no cached-token usage documented — treat as uncached.
 # Docs: https://kenari.id/docs
 name = "Kenari"
 npm = "@ai-sdk/openai-compatible"

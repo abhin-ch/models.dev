@@ -1,6 +1,7 @@
-# Cache key (chat): strip prompt_cache_key — supported-parameter table is closed (10 params, no cache fields); docs direct users to contact support to add unlisted params.
+# Cache key (chat): Use headers/body none — supported-parameter table is closed (10 params, no cache fields); unknown body fields return 400, docs direct users to contact support to add params.
 # Cache headers: none (x-inference-* headers are routing/metadata, not cache)
-# Cache policy: no documented prompt cache; identical-prefix retries rely on upstream implicit caching only.
+# Cache policy: no documented prompt cache; replay requests with a stable byte-identical prefix on the same model.
+# Cache verify: no cached-token usage field documented — treat as uncached.
 # Docs: https://docs.inference.net/api/api-quickstart
 name = "Inference"
 env = ["INFERENCE_API_KEY"]
