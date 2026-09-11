@@ -1,3 +1,5 @@
+# Prompt cache (chat): SUPPORTS — automatic prefix caching plus optional prompt_cache_key routing hint; hits reported via usage.prompt_tokens_details.cached_tokens.
+# Docs: https://www.jalapeno-cloud.ai/docs/inference/features/prompt-caching
 name = "Jalapeno Cloud"
 env = ["JALAPENO_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

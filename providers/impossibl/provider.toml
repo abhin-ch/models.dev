@@ -1,3 +1,5 @@
+# Prompt cache (chat): NATIVE_OTHER — automatic prefix caching on most routes; Anthropic needs cache_control breakpoint, no prompt_cache_key field.
+# Docs: https://impossibl.com/docs/prompt-caching.md
 name = "Impossibl"
 npm = "@ai-sdk/openai-compatible"
 api = "https://api.impossibl.com/v1"

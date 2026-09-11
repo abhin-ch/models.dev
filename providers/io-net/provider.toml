@@ -1,3 +1,5 @@
+# Prompt cache (chat): NATIVE_OTHER — automatic prefix cache with no request fields; per-model supports_prompt_cache flag with cache read/write rates.
+# Docs: https://io.net/docs/reference/ai-models/get-models-list
 name = "IO.NET"
 env = ["IOINTELLIGENCE_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

@@ -1,3 +1,5 @@
+# Prompt cache (chat): SUPPORTS — automatic prefix caching with discounted cached-input rates, reported via usage.prompt_tokens_details.cached_tokens.
+# Docs: https://docs.inceptionlabs.ai/get-started/models
 name = "Inception"
 env = ["INCEPTION_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

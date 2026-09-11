@@ -1,3 +1,5 @@
+# Prompt cache (chat): NATIVE_OTHER — explicit cache_control breakpoints for Anthropic plus implicit prefix caching for OpenAI/Gemini-backed models.
+# Docs: https://docs.jiekou.ai/docs/feature/prompt-caching.md
 name = "Jiekou.AI"
 env = ["JIEKOU_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

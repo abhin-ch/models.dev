@@ -1,3 +1,5 @@
+# Prompt cache (chat): UNKNOWN — serverless OpenAI-compatible API; docs cover setup and basic chat only, no cache fields or caching behavior.
+# Docs: https://docs.inceptron.io
 name = "Inceptron"
 npm = "@ai-sdk/openai-compatible"
 env = ["INCEPTRON_API_KEY"]

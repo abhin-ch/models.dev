@@ -1,3 +1,5 @@
+# Prompt cache (chat): UNKNOWN — no public API reference; endpoints page lists models only, no cache behavior documented.
+# Docs: https://model.inferx.net/endpoints
 name = "InferX"
 env = ["INFERX_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

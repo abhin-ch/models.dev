@@ -1,3 +1,5 @@
+# Prompt cache (chat): UNKNOWN — supported-parameter table lists no cache fields; no cached-token usage or cache rates documented.
+# Docs: https://docs.inference.net/api/api-quickstart
 name = "Inference"
 env = ["INFERENCE_API_KEY"]
 npm = "@ai-sdk/openai-compatible"

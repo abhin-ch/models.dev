@@ -1,3 +1,5 @@
+# Prompt cache (chat): UNKNOWN — OpenAI-compatible API documents no prompt-cache params; usage reports prompt/completion/total tokens only.
+# Docs: https://iteracompute.com/docs.html
 # IteraCompute exposes an OpenAI-compatible API through @ai-sdk/openai-compatible.
 # Authentication uses ITERACOMPUTE_API_KEY; the API base URL is https://api.iteracompute.com/v1.
 name = "IteraCompute"

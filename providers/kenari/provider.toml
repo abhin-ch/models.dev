@@ -1,3 +1,5 @@
+# Prompt cache (chat): UNKNOWN — site and docs unreachable; no cache params or caching behavior verifiable.
+# Docs: https://kenari.id/docs
 name = "Kenari"
 npm = "@ai-sdk/openai-compatible"
 env = ["KENARI_API_KEY"]

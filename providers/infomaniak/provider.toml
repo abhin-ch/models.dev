@@ -1,3 +1,5 @@
+# Prompt cache (chat): TOLERATES — OpenAI-compatible chat API publishes no cache params, cached-token usage, or cached-input rates.
+# Docs: https://developer.infomaniak.com/docs/api/post/2/ai/%7Bproduct_id%7D/openai/v1/chat/completions
 name = "Infomaniak"
 npm = "@ai-sdk/openai-compatible"
 api = "https://api.infomaniak.com/2/ai/${INFOMANIAK_PRODUCT_ID}/openai/v1"
