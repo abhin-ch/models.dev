@@ -5,5 +5,5 @@ reasoning_options = []
 [cost]
 input = 0.3
 output = 30
-cache_read = 0.3
+cache_read = 0.075
 cache_write = 0.3
