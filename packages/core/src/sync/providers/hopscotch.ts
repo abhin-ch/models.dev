@@ -488,6 +488,33 @@ export function buildHopscotchModel(
   );
 }
 
+/**
+ * Whether Hopscotch's own serve test has proven the model answers.
+ *
+ * The list endpoint says what is switched on; the detail endpoint says what was
+ * actually called and completed. A model can be on sale and still fail that
+ * test, or never have been tested, so only an explicit "servable" verdict
+ * counts. Absent or any other outcome is not a listing.
+ */
+export function isProvenServable(detail: unknown): boolean {
+  const providers = (detail as { uniblock?: { providers?: unknown } })?.uniblock?.providers;
+  if (!Array.isArray(providers)) return false;
+  return providers.some(
+    (provider) =>
+      (provider as { serve_verdict?: { outcome?: unknown } })?.serve_verdict?.outcome === "servable",
+  );
+}
+
+const DETAIL_CONCURRENCY = 8;
+
+async function fetchJson(url: string) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Hopscotch request failed: ${response.status} ${response.statusText} (${url})`);
+  }
+  return response.json();
+}
+
 // ========================================
 // Hopscotch provider
 // ========================================
@@ -497,14 +524,25 @@ export const hopscotch = {
   name: "Hopscotch",
   modelsDir: "providers/hopscotch/models",
   preserveBaseModels: false,
+  /**
+   * The list, narrowed to models whose serve test passed. A failed detail read
+   * throws rather than dropping the model: a flaky request must not delete an
+   * already-synced file on the next hourly run.
+   */
   async fetchModels() {
-    const response = await fetch(API_ENDPOINT);
-    if (!response.ok) {
-      throw new Error(
-        `Hopscotch request failed: ${response.status} ${response.statusText}`,
+    const list = await fetchJson(API_ENDPOINT);
+    const models: Array<{ id: string }> = Array.isArray(list?.data) ? list.data : [];
+    const proven = new Set<string>();
+    for (let i = 0; i < models.length; i += DETAIL_CONCURRENCY) {
+      const batch = models.slice(i, i + DETAIL_CONCURRENCY);
+      const details = await Promise.all(
+        batch.map((model) => fetchJson(`${API_ENDPOINT}/${model.id}`)),
       );
+      batch.forEach((model, index) => {
+        if (isProvenServable(details[index])) proven.add(model.id);
+      });
     }
-    return response.json();
+    return { ...list, data: models.filter((model) => proven.has(model.id)) };
   },
   parseModels(raw) {
     return HopscotchResponse.parse(raw).data;

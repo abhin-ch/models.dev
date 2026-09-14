@@ -1,12 +1,7 @@
 import { expect, test } from "bun:test";
 
 import { MissingReasoningOptionsError } from "../src/sync/missing-reasoning-options.js";
-import {
-  HopscotchModel,
-  hopscotch,
-  reasoningOptionsFor,
-  resolveHopscotchBaseModel,
-} from "../src/sync/providers/hopscotch.js";
+import { HopscotchModel, hopscotch, reasoningOptionsFor, resolveHopscotchBaseModel, isProvenServable } from "../src/sync/providers/hopscotch.js";
 
 function model(overrides: Record<string, unknown> = {}) {
   const uniblock = {
@@ -273,4 +268,13 @@ test("an effort ladder names its own wire path", () => {
     { existing: () => undefined, authored: () => undefined },
   );
   expect(translated?.header).toContain("# Effort: reasoning_effort =");
+});
+
+test("only an explicit servable verdict counts as live", () => {
+  const detail = (outcome: unknown) => ({ uniblock: { providers: [{ serve_verdict: outcome === undefined ? null : { outcome } }] } });
+  expect(isProvenServable(detail("servable"))).toBe(true);
+  expect(isProvenServable(detail("unservable"))).toBe(false);
+  expect(isProvenServable(detail(undefined))).toBe(false);
+  expect(isProvenServable({ uniblock: {} })).toBe(false);
+  expect(isProvenServable(null)).toBe(false);
 });
