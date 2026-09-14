@@ -1,4 +1,6 @@
 # Toggle: thinking.type = enabled|disabled
+# Effort: not forwarded. The anthropic parameter map sends thinking and no
+# reasoning_effort or output_config, so only the controls below can travel.
 # https://platform.hopscotchlabs.ai/models
 base_model = "anthropic/claude-sonnet-5"
 structured_output = true
